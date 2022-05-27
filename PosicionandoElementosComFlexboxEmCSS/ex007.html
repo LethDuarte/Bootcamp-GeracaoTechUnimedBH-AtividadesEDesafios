@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos - align content</title>
+    <style>
+        .container{
+            height: 400px;
+            max-width: 300px;
+            border: 1px solid black;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .item{
+           background-color: blueviolet;
+           padding: 0 5px;
+           margin: 5px;
+           color: white;
+           text-align: center;
+           flex: 1;
+        }
+
+        .center{
+            align-content: center;
+        }
+
+        .stretch{
+            align-content: stretch;
+        }
+
+        .flex-start{
+            align-content: flex-start;
+        }
+
+        .flex-end{
+            align-content: flex-end;
+        }
+
+        .spacebetween{
+            align-content: space-between;
+        }
+
+        .spacearound {
+            align-content: space-around;
+        }
+
+        .column{
+            flex-direction: column;
+        }
+    </style>
+</head>
+<body>
+    <p>center</p>
+    <div class="container center">
+        <div class="item">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</div>
+        <div class="item">Recusandae, qui. Incidunt asperiores quia fuga corporis.</div>
+        <div class="item">Labore rem impedit soluta exercitationem praesentium!</div>
+        <div class="item"> Nobis quia officia modi maiores illo! </div>
+        <div class="item">Quae nulla similique beatae consectetur nam.</div>
+        <div class="item">Lorem ipsum dolor sit amet.</div>
+        <div class="item">Lorem ipsum dolor sit amet consectetur.</div>
+    </div>
+
+    <p>stretch</p>
+    <div class="container stretch">
+        <div class="item">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</div>
+        <div class="item">Recusandae, qui. Incidunt asperiores quia fuga corporis.</div>
+        <div class="item">Labore rem impedit soluta exercitationem praesentium!</div>
+        <div class="item"> Nobis quia officia modi maiores illo! </div>
+        <div class="item">Quae nulla similique beatae consectetur nam.</div>
+        <div class="item">Lorem ipsum dolor sit amet.</div>
+        <div class="item">Lorem ipsum dolor sit amet consectetur.</div>
+    </div>
+
+    <p>flex-start</p>
+    <div class="container flex-start">
+        <div class="item">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</div>
+        <div class="item">Recusandae, qui. Incidunt asperiores quia fuga corporis.</div>
+        <div class="item">Labore rem impedit soluta exercitationem praesentium!</div>
+        <div class="item"> Nobis quia officia modi maiores illo! </div>
+        <div class="item">Quae nulla similique beatae consectetur nam.</div>
+        <div class="item">Lorem ipsum dolor sit amet.</div>
+        <div class="item">Lorem ipsum dolor sit amet consectetur.</div>
+    </div>
+
+    <p>flex-end</p>
+    <div class="container flex-end">
+        <div class="item">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</div>
+        <div class="item">Recusandae, qui. Incidunt asperiores quia fuga corporis.</div>
+        <div class="item">Labore rem impedit soluta exercitationem praesentium!</div>
+        <div class="item"> Nobis quia officia modi maiores illo! </div>
+        <div class="item">Quae nulla similique beatae consectetur nam.</div>
+        <div class="item">Lorem ipsum dolor sit amet.</div>
+        <div class="item">Lorem ipsum dolor sit amet consectetur.</div>
+    </div>
+
+    <p>spacebetween</p>
+    <div class="container spacebetween">
+        <div class="item">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</div>
+        <div class="item">Recusandae, qui. Incidunt asperiores quia fuga corporis.</div>
+        <div class="item">Labore rem impedit soluta exercitationem praesentium!</div>
+        <div class="item"> Nobis quia officia modi maiores illo! </div>
+        <div class="item">Quae nulla similique beatae consectetur nam.</div>
+        <div class="item">Lorem ipsum dolor sit amet.</div>
+        <div class="item">Lorem ipsum dolor sit amet consectetur.</div>
+    </div>
+
+    <p>spacearound</p>
+    <div class="container spacearound">
+        <div class="item">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</div>
+        <div class="item">Recusandae, qui. Incidunt asperiores quia fuga corporis.</div>
+        <div class="item">Labore rem impedit soluta exercitationem praesentium!</div>
+        <div class="item"> Nobis quia officia modi maiores illo! </div>
+        <div class="item">Quae nulla similique beatae consectetur nam.</div>
+        <div class="item">Lorem ipsum dolor sit amet.</div>
+        <div class="item">Lorem ipsum dolor sit amet consectetur.</div>
+    </div>
+    
+</body>
+</html>
