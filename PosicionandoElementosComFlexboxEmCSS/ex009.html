@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos - flex basis</title>
+    <style>
+        .container{
+            max-width: 500px;
+            border: 1px solid black;
+            display: flex;
+        }
+
+        .item{
+           background-color: blueviolet;
+           margin: 5px;
+           color: white;
+           text-align: center;
+        }
+
+        .bauto {
+            flex-basis: auto;
+        }
+
+        .b0{/*define todos os itens com o mesmo width, enquanto for possível comprimir seu conteúdo dento do width padronizado*/
+            flex-basis: 0;
+        }
+
+        .bwidth{
+            flex-basis: 100px;
+        }
+
+        .fg-1 { 
+            flex-grow: 1; 
+        }
+
+        .fg-2 {
+            flex-grow: 2;
+        }
+    </style>
+</head>
+<body>
+    <p>flexi-basis auto</p>
+    <div class="container">
+        <div class="item bauto fg-1">A</div>
+        <div class="item bauto fg-1">BBB</div>
+        <div class="item bauto fg-1">C</div>
+        <div class="item bauto fg-2">DDD</div>
+    </div>
+
+    <p>flexi-basis 0(zero)</p>
+    <div class="container"> 
+        <div class="item b0 fg-1">A</div>
+        <div class="item b0 fg-1">BBB</div>
+        <div class="item b0 fg-1">C</div>
+        <div class="item b0 fg-1">DDD</div> 
+    </div>
+
+    <p>basis + width</p>
+    <div class="container">
+        <div class="item bwidth fg-2">AAAA</div>
+        <div class="item bwidth fg-2">B</div>
+        <div class="item bwidth fg-2">CCCC</div>
+        <div class="item bwidth fg-2">D</div>
+    </div> 
+    
+</body>
+</html>
