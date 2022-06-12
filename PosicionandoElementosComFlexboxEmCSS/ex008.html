@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos - flex grow</title>
+    <style>
+        .container{
+            max-width: 300px;
+            border: 1px solid black;
+            display: flex;
+        }
+
+        .item{
+           background-color: blueviolet;
+           padding: 5px;
+           margin: 5px;
+           color: white;
+           text-align: center;
+        }
+
+        .fg-0 {
+            flex-grow: 0;
+        }
+
+        .fg-1 { 
+            flex-grow: 1; /*define o espaço fica antes e depois do conteúdo*/
+        }
+
+        .fg-2 {
+            flex-grow: 2;
+        }
+
+        .fg-3 {
+            flex-grow: 3;
+        }
+    </style>
+</head>
+<body>
+    <p>flex grow = 0</p>
+    <div class="container">
+        <div class="item fg-0">A</div>
+        <div class="item fg-0">B</div>
+        <div class="item fg-0">C</div>
+        <div class="item fg-0">D</div>
+    </div>
+
+    <p>flex grow = 1</p>
+    <div class="container"> <!--como todos receberam o mesmo valor de flex-grow, ficam com a mesma largura-->
+        <div class="item fg-1">A</div> <!--com diferentes valores de flex-grow, temos diferentes larguras-->
+        <div class="item fg-1">B</div>
+        <div class="item fg-1">C</div>
+        <div class="item fg-1">D</div> 
+    </div>
+
+    <p>flex grow = alternados</p>
+    <div class="container">
+        <div class="item fg-1">A</div>
+        <div class="item fg-2">B</div>
+        <div class="item fg-2">C</div>
+        <div class="item fg-1">D</div>
+    </div>
+
+    <p>flex grow = alternados</p>
+    <div class="container">
+        <div class="item fg-2">AAAAAAA</div>
+        <div class="item fg-2">BBB</div>
+        <div class="item fg-2">CCCC</div>
+        <div class="item fg-2">DDDDD</div>
+    </div>
+
+    
+    
+</body>
+</html>
