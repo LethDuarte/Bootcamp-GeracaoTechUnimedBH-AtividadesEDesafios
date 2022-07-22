@@ -8,21 +8,83 @@ namespace Colecoes
     {
         static void Main(string[] args)
         {
-            Queue<string> fila = new Queue<string>();
+            int[] arrayNumbers = new int[10] {100, 1, 4, 0, 8, 15, 19, 1, 4, 15};
 
-            fila.Enqueue("Leonardo");
-            fila.Enqueue("Eduardo");
-            fila.Enqueue("André");
+            var minimo = arrayNumbers.Min();
+            var medio = arrayNumbers.Average();
+            var maximo = arrayNumbers.Max();
+            var soma = arrayNumbers.Sum();
+            var arrayUnico = arrayNumbers.Distinct().ToArray();
 
-            System.Console.WriteLine($"Pessoas na fila: {fila.Count}");
+            System.Console.WriteLine($"Mínimo: {minimo}");
+            System.Console.WriteLine($"Médio: {medio}");
+            System.Console.WriteLine($"Máximo: {maximo}");
+            System.Console.WriteLine($"Soma: {soma}");
+            System.Console.WriteLine($"Array original: {string.Join(", ", arrayNumbers)}");
+            System.Console.WriteLine($"Array distinto: {string.Join(", ", arrayUnico)}");
 
-            while (fila.Count > 0)
-            {
-                System.Console.WriteLine($"Vez de {fila.Peek()}");
-                System.Console.WriteLine($"{fila.Dequeue()} atendido.");
-            }
 
-            System.Console.WriteLine($"Pessoas na fila: {fila.Count}");
+            //Query syntax:
+            // from num in numbers
+            // where num % 2 == 0
+            // orderby num
+            // select num;
+
+            //Method syntax
+
+            // Dictionary<string, string> estados = new Dictionary<string, string>();
+            // estados.Add("SP", "São Paulo");
+            // estados.Add("MG", "Minas Gerais");
+            // estados.Add("BA", "Bahia");
+
+            // string valorProcurado = "BA";
+            // System.Console.WriteLine($"Removendo o valor: {valorProcurado}.");
+            // estados.Remove(valorProcurado);         
+
+            // System.Console.WriteLine("Valor original:");
+            // System.Console.WriteLine(estados[valorProcurado]);
+
+            // estados[valorProcurado] = "BA - teste atualização";
+
+            // System.Console.WriteLine("Valor atualizado:");
+            // System.Console.WriteLine(estados[valorProcurado]);
+
+            // foreach (KeyValuePair<string, string> item in estados)
+            // {
+            //     System.Console.WriteLine($"Chave: {item.Key}, Valor: {item.Value}.");
+            // }
+
+
+            // Stack<string> pilhaLivros = new Stack<string>();
+
+            // pilhaLivros.Push(".NET");
+            // pilhaLivros.Push("DDD");
+            // pilhaLivros.Push("Código Limpo");
+
+            // System.Console.WriteLine($"Livros para leitura: {pilhaLivros.Count}.");
+            // while (pilhaLivros.Count > 0)
+            // {
+            //     System.Console.WriteLine($"Próximo livro para a leitura: {pilhaLivros.Peek()}");
+            //     System.Console.WriteLine($"{pilhaLivros.Pop()} lido com sucesso.");
+            // }
+
+            // System.Console.WriteLine($"Livros para a leitura: {pilhaLivros.Count}");
+
+            // Queue<string> fila = new Queue<string>();
+
+            // fila.Enqueue("Leonardo");
+            // fila.Enqueue("Eduardo");
+            // fila.Enqueue("André");
+
+            // System.Console.WriteLine($"Pessoas na fila: {fila.Count}");
+
+            // while (fila.Count > 0)
+            // {
+            //     System.Console.WriteLine($"Vez de {fila.Peek()}");
+            //     System.Console.WriteLine($"{fila.Dequeue()} atendido.");
+            // }
+
+            // System.Console.WriteLine($"Pessoas na fila: {fila.Count}");
 
 
             // OperacoesLista opLista = new OperacoesLista();
@@ -42,9 +104,9 @@ namespace Colecoes
             // OperacoesArray op = new OperacoesArray();
             // int[] array = new int[5] {6, 3, 8, 1, 9};
             // int [] arrayCopia = new int[10];
-            // string[] arrayString = op.ConverterParaArrayString(array);
+           // string[] arrayString = op.ConverterParaArrayString(array);
 
-            // //int valorProcurado = 9;
+            //int valorProcurado = 9;
 
             // System.Console.WriteLine($"Capacidade atual do array: {array.Length}");
 
@@ -131,15 +193,19 @@ namespace Colecoes
 
             // int[] arrayInteiros = new int[3]; //declarei um array com capacidade máxima de 3posicoes
 
-            // //inserindo valor em cada uma das posições
+            // // //inserindo valor em cada uma das posições
             // arrayInteiros[0] = 10;
             // arrayInteiros[1] = 20;
-            // arrayInteiros[2] = 30;
+            // arrayInteiros[2] = int.Parse("30");
+
+            // arrayInteiros[3] = 40;
+
+            // System.Console.WriteLine(arrayInteiros);
 
             // System.Console.WriteLine("Percorrendo o array pelo for:");
             // for (int i = 0; i < arrayInteiros.Length; i++) //boa pratica usar sempre o .Length, que pega a capacidade total do array
             // {
-            //     Console.WriteLine(arrayInteiros[i]);
+            //  Console.WriteLine(arrayInteiros[i]);
             // }
 
             // System.Console.WriteLine("Percorrendo o array pelo foreach:");
