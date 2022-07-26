@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "dgSpecHash": "Ka/ih2eABN35D5ginOdoxFzC3WbPYKWm0mefLCQNUlp5/PuCq1vDUfdfxfnebcFsSJ+eOOvlfKruUlStrH6/CQ==",
+  "success": false,
+  "projectFilePath": "C:\\Users\\lethd\\OneDrive\\Área de Trabalho\\Pessoal\\Estudos Qualificação\\Programação e TI\\Bootcamp Geração TECH Unimed BH - FullStack\\Bootcamp-GeracaoTechUnimedBH-AtividadesEDesafios\\modulo6\\materia6\\CSVHelper\\CSVHelper.csproj",
+  "expectedPackageFiles": [],
+  "logs": [
+    {
+      "code": "NU1108",
+      "level": "Error",
+      "message": "Ciclo detectado. \r\n  CSVHelper -> CsvHelper (>= 27.2.1).",
+      "libraryId": "CsvHelper",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    }
+  ]
+}
