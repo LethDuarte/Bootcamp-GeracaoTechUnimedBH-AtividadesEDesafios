@@ -1,6 +1,7 @@
 ﻿using System;
 using ExemploPOO.Models;
 using ExemploPOO.Interfaces;
+using ExemploPOO.Helper;
 
 namespace ExemploPOO
 {
@@ -8,8 +9,42 @@ namespace ExemploPOO
     {
         static void Main(string[] args)
         {
-            ICalculadora calc = new Calculadora();
-            System.Console.WriteLine(calc.Somar(10, 20));
+            var caminho = "C:\\DIO - TrabalhandoComArquivos";
+            var caminhoPathCombine = Path.Combine(caminho, "PastaTeste 3");
+            var caminhoArquivo = Path.Combine(caminho, "arquivo-test-stream.txt");
+            var caminhoArquivoTeste = Path.Combine(caminho, "arquivo-teste.txt");
+            var caminhoArquivoTesteCopia = Path.Combine(caminho, "arquivo-teste-bkp.txt");
+            var novoCaminhoArquivo = Path.Combine(caminho, "PastaTeste 2", "arquivo-teste-stream.tx");
+
+            var listaString = new List<string>{"Linha 1", "Linha 2", "Linha 3"};
+            var listaStringContinuacao = new List<string>{"Linha 4", "Linha 5", "Linha 6"};
+
+            FileHelper helper = new FileHelper();
+            helper.DeletarArquivo(caminhoArquivoTesteCopia);
+
+            //helper.CopiarArquivo(caminhoArquivoTeste, caminhoArquivoTesteCopia, false);
+
+            //helper.MoverArquivo(caminhoArquivo, novoCaminhoArquivo);
+            //helper.LerArquivosStream(caminhoArquivo);
+
+            //helper.CriarArquivoTextoStream(caminhoArquivo, listaString);
+            //helper.AdicionarTextoStream(caminhoArquivo, listaStringContinuacao);
+            
+            
+            //helper.CriarArquivoTextoStream(caminhoArquivo, listaString);
+            
+            //helper.CriarArquivoTexto(caminhoArquivo, "Olá! Teste de escrita de arquivo.");
+
+            //helper.ApagarDiretorio(caminhoPathCombine, true);
+
+            // System.Console.WriteLine("Criando diretório: " + caminhoPathCombine);
+            // helper.CriarDiretorio(caminhoPathCombine);
+
+            //helper.ListarArquivosDiretorios(caminho);
+            //helper.ListarDiretorios(caminho);
+            
+            // ICalculadora calc = new Calculadora();
+            // System.Console.WriteLine(calc.Somar(10, 20));
             
             
             // Corrente c = new Corrente();
